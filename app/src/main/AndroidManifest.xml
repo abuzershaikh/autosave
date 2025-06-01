@@ -56,6 +56,12 @@
                 android:name="android.accessibilityservice"
                 android:resource="@xml/accessibility_service_config" />
         </service>
+        <activity
+            android:name=".ui.ContactActivity"
+            android:exported="false"
+            android:label="Edit Contacts">
+            {/* android:theme="@style/Theme.AppCompat.Light.NoActionBar" /> Replaced by Jetpack Compose theme */}
+        </activity>
     </application>
 
 </manifest>
