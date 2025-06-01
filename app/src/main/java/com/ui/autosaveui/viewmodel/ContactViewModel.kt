@@ -1,5 +1,6 @@
 package com.ui.autosaveui.viewmodel
 
+import android.util.Log
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
@@ -19,10 +20,15 @@ class ContactViewModel : ViewModel() {
     }
 
     fun loadContacts(numbers: List<String>) {
+        Log.d("ContactViewModel", "loadContacts received numbers: $numbers, Count: ${numbers.size}")
+        // contacts.clear() // Optional
         numbers.forEach { number ->
             contacts.add(ContactEntry(number = number, name = ""))
         }
-        updateContactNames()
+        Log.d("ContactViewModel", "ViewModel contacts after adding: ${contacts.map { it.number }}, Count: ${contacts.size}")
+        if (numbers.isNotEmpty()) {
+            updateContactNames()
+        }
     }
 
     fun generateCsvData(): String {

@@ -23,6 +23,7 @@ fun ContactScreen(
     viewModel: ContactViewModel = viewModel(),
     extractedNumbers: List<String>
 ) {
+    Log.d("ContactScreen", "Received extractedNumbers: $extractedNumbers, Count: ${extractedNumbers.size}")
 
     LaunchedEffect(extractedNumbers) {
         viewModel.loadContacts(extractedNumbers)
