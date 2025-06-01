@@ -3,7 +3,11 @@ package com.ui.autosaveui.ui
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material.*
+import androidx.compose.material3.Button
+// import androidx.compose.material3.MaterialTheme // Removed
+// import androidx.compose.material3.Surface // Removed
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
@@ -11,8 +15,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.ui.autosaveui.viewmodel.ContactViewModel
-import com.ui.autosaveui.model.ContactEntry // Added this import
-import android.util.Log // Added this import
+import com.ui.autosaveui.model.ContactEntry
+import android.util.Log
 
 @Composable
 fun ContactScreen(
