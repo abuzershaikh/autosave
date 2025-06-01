@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Autosave ui</string>
+
+    <string name="accessibility_service_description">
+        This service helps to read on-screen content for demonstration purposes. Please enable it in settings.
+    </string>
+
+
+</resources>
